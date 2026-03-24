@@ -1,93 +1,341 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DevAgency Loading...</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>DevAgency | Web Solutions Marketplace</title>
 
-  <!-- Auto Redirect -->
-  <meta http-equiv="refresh" content="7;url=https://abstryaproject.github.io/devagency/">
+<!-- SEO -->
+<meta name="description" content="DevAgency is a modern web solutions marketplace connecting clients with professional developers for websites, apps, UI/UX design, and digital services.">
+<meta name="keywords" content="DevAgency, Web Solutions, Hire Developers, Website Development, App Development, UI UX Design, Digital Services Marketplace">
+<meta name="author" content="DevAgency Team">
+<meta name="robots" content="index, follow">
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: Arial, sans-serif;
-    }
+<!-- Open Graph / Social Sharing -->
+<meta property="og:title" content="DevAgency | Web Solutions Marketplace">
+<meta property="og:description" content="Connect with professional developers and build powerful digital solutions with DevAgency.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://devagence.github.io/app/">
+<meta property="og:image" content="https://abstryaproject.github.io/devagency/logo.jpg">
 
-    body {
-      background: linear-gradient(135deg, #0f172a, #1e293b);
-      color: #fff;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      text-align: center;
-    }
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="DevAgency | Web Solutions Marketplace">
+<meta name="twitter:description" content="Connect with developers and build modern websites, apps, and digital experiences.">
+<meta name="twitter:image" content="https://abstryaproject.github.io/devagency/logo.jpg">
 
-    .container {
-      max-width: 400px;
-    }
+<!-- Favicon -->
+<link id="dynamic-favicon" rel="icon" type="image/png" href="https://abstryaproject.github.io/devagency/logo.jpg">
+<link rel="apple-touch-icon" sizes="180x180" href="https://abstryaproject.github.io/devagency/logo.jpg">
 
-    .logo {
-      font-size: 28px;
-      font-weight: bold;
-      margin-bottom: 10px;
-      color: #38bdf8;
-    }
+<!-- Theme & Browser Colors -->
+<meta name="theme-color" content="#1e90ff">
+<meta name="msapplication-TileColor" content="#1e90ff">
+<meta name="msapplication-TileImage" content="https://abstryaproject.github.io/devagency/logo.jpg">
 
-    .loader {
-      margin: 30px auto;
-      border: 4px solid rgba(255,255,255,0.1);
-      border-top: 4px solid #38bdf8;
-      border-radius: 50%;
-      width: 50px;
-      height: 50px;
-      animation: spin 1s linear infinite;
-    }
+<!-- iOS Web App Mode -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="stylesheet" href="css/style.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+  .follow-contact {
+  color: #e5e7eb;
+  padding: 80px 20px;
+  text-align: center;
+}
 
-    @keyframes spin {
-      100% { transform: rotate(360deg); }
-    }
+.follow-contact h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
 
-    p {
-      font-size: 14px;
-      opacity: 0.8;
-    }
+.follow-contact p {
+  color: #94a3b8;
+  margin-bottom: 35px;
+  font-size: 0.95rem;
+}
 
-    .btn {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 10px 20px;
-      background: #38bdf8;
-      color: #000;
-      text-decoration: none;
-      border-radius: 6px;
-      font-weight: bold;
-      transition: 0.3s;
-    }
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+}
 
-    .btn:hover {
-      background: #0ea5e9;
-    }
-  </style>
+.social-links a {
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  color: #e5e7eb;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(6px);
+}
+
+.social-links a:hover {
+  transform: translateY(-4px) scale(1.05);
+  background: #0ff;
+  color: white;
+  box-shadow: 0 10px 25px rgba(37, 99, 235, 0.35);
+}
+
+/* Optional responsive tweak */
+@media (max-width: 480px) {
+  .social-links {
+    gap: 12px;
+  }
+</style>
 </head>
-
 <body>
-  <div class="container">
-    <div class="logo">DevAgency</div>
+<div id="secure-content"></div>
 
-    <div class="loader"></div>
+<!-- PARTICLES BACKGROUND -->
+<div id="particles-js"></div>
 
-    <p>
-      We're still setting things up on this domain.<br>
-      Redirecting you to our main application...
-    </p>
-
-    <a href="https://abstryaproject.github.io/devagency/" class="btn">
-      Continue Now
-    </a>
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="container flex-nav">
+    <div class="logo">DEV<span>AGENCY</span></div>
+    <ul class="nav-links" id="nav-menu">
+      <li><a href="#services" class="service-link" data-service="">Services</a></li>
+      <li><a href="#about">About Us</a></li>
+      <li><a href="#testimonials">Testimonials</a></li>
+      <li><a href="https://abstryaproject.github.io/devagency/contact.html" class="contact-link">Contact</a></li>
+      <li><a href="#" class="cta-nav" id="requestProjectBtn">Request a Project</a></li>
+    </ul>
+    <div class="right-buttons">
+      <div class="menu-toggle" id="mobile-menu"><i class="fa-solid fa-bars"></i></div>
+      <button id="themeToggle" class="btn btn-outline">🌙</button>
+    </div>
   </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero reveal">
+  <div class="container">
+    <h1>We Build <span>Smart Web Solutions</span></h1>
+    <p>Custom websites, apps, SaaS platforms, and developer hiring for your business, brand, or personal project.</p>
+    <div class="hero-btns">
+      <button class="btn btn-primary" id="heroRequestBtn">Request a Project</button>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services" class="section reveal">
+  <div class="container">
+    <h1><center>Our Services</center></h1>
+    <div class="services-grid" id="servicesGrid">
+      <!-- Dynamic Services Cards Injected via JS -->
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="section reveal">
+  <div class="container">
+    <h1><center>About Us</center></h1>
+    <div class="testimonials-grid">
+      <div class="testimonial-card reveal">
+        <p>DevAgency is a modern web solutions marketplace built to help businesses turn ideas into powerful digital products.
+          We connect individuals, startups, and organizations with reliable, high-quality development services—fast, transparent, and results-driven.
+          <br><br>
+          We believe getting a website or digital system shouldn’t be complicated, overpriced, or uncertain. That’s why DevAgency focuses on
+          <strong>clarity, quality, and efficiency</strong>. From business websites and e-commerce platforms to custom web applications,
+          we deliver solutions that are secure, scalable, and tailored to real business needs.
+          <br><br>
+          What sets us apart is our <strong>structured approach</strong>. Every project comes with clear pricing, defined timelines,
+          and professional execution—no guesswork, no hidden costs.
+          <br><br>
+          At DevAgency, we don’t just build websites—we build
+          <strong>digital foundations</strong> that help brands grow, compete, and succeed in today’s online world.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- TESTIMONIALS -->
+<section id="testimonials" class="section bg-light reveal">
+  <div class="container">
+    <h1><center>Testimonials</center></h1>
+    
+
+    <div class="testimonials-slider">
+
+      <div class="testimonial-card reveal">
+        <span class="badge">Verified Client</span>
+        <div class="stars">★★★★★</div>
+        <p>
+          "DevAgency built our e-commerce platform with incredible quality and attention to detail.
+          The result exceeded our expectations."
+        </p>
+          – Abstrya Plc.,
+          → <a href="https://abstryaproject.github.io/supershop/" target="_blank">SuperShop</a>
+      </div>
+      <br/></br/>
+      <div class="testimonial-card reveal">
+        <span class="badge">Verified Client</span>
+        <div class="stars">★★★★★</div>
+        <p>
+          “Delivered exactly to specification.”DevAgency understood the requirements clearly and delivered a dependable CBT platform on time. The result is a professional system suitable for both schools and training centers.
+        </p>
+          – IT Admin.,
+          → <a href="https://abstryaproject.github.io/cbt/" target="_blank">MCB Test</a>
+      </div>
+      <br/></br/>
+      <div class="testimonial-card reveal">
+        <span class="badge">Verified Client</span>
+        <div class="stars">★★★★★</div>
+        <p>"Fast, beautiful, and very easy to use.”
+HALA MAYE feels modern and lightweight. Albums and artists are well organized, and switching between songs is seamless. It’s clear a lot of thought went into the user experience."</p>
+        - Shamsu Tukur, → <a href="https://abstryaproject.github.io/music/" target="_blank">HalaMaye</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+  <section class="follow-contact">
+  <div class="container">
+    <h2>Follow Us</h2>
+    <p>Stay connected with DevAgency. Let’s build something amazing together.</p>
+
+    <div class="social-links">
+      <a target="_blank" href="https://www.facebook.com/abstrya?mibextid=ZbWKwL" aria-label="Facebook">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a target="_blank" href="https://x.com/AbdullahiI79026" aria-label="Twitter / X">
+        <i class="fab fa-twitter"></i>
+      </a>
+      <a target="_blank" href="https://www.instagram.com/abstrya?igsh=MW5uaHhmNGR3b2J4bA==" aria-label="Instagram">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a target="_blank" href="https://wa.me/2348138605126?text=Hello%20Admin%2C%20I%E2%80%99m%20interested%20in%20your%20services%20at%20DevAgency.%20Please%20provide%20more%20details." aria-label="WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+      </a>
+    </div>
+  </div>
+</section>
+<!-- MODAL POPUP -->
+<div id="modalOverlay" class="modal-overlay">
+  <div class="modal">
+    <button class="modal-close" id="modalCloseBtn">Close</button>
+
+    <!-- PROJECT FORM -->
+    <div class="form-wrapper card" id="projectForm">
+      <h2>Request a Project</h2>
+      <input type="text" id="clientName" placeholder="Full Name" required>
+      <input type="email" id="clientEmail" placeholder="Email Address" required>
+      <select id="serviceSelect">
+        <option value="">Select a service</option>
+      </select>
+      <textarea id="description" placeholder="Describe exactly what you want"></textarea>
+      <div id="featuresContainer" class="features"></div>
+      <div class="price-box" id="priceDisplay">Estimated Cost: ₦0</div>
+      <div class="price-box" id="timelineBox">Estimated Timeline: —</div>
+      <div class="form-actions">
+        <button type="button" id="submitProjectBtn" class="btn btn-primary">Submit Request</button>
+      </div>
+    </div>
+
+    <!-- HIRE FORM -->
+    <div class="form-wrapper card" id="hireForm">
+      <h2>Hire a Developer</h2>
+      <label>Hire Type</label>
+      <select id="hireType">
+        <option>Hourly</option>
+        <option>Part-Time</option>
+        <option>Full-Time</option>
+        <option>Project-Based</option>
+      </select>
+
+      <label>Required Skills</label>
+      <textarea id="skills" placeholder="HTML, CSS, JS, React, Laravel, etc"></textarea>
+
+      <label>Job / Task Description</label>
+      <textarea id="hireDescription" placeholder="Describe the work or project"></textarea>
+
+      <label>Expected Duration</label>
+      <select id="duration">
+        <option>Less than 1 week</option>
+        <option>1–4 weeks</option>
+        <option>1–3 months</option>
+        <option>Long-term</option>
+      </select>
+
+      <label>Budget Range</label>
+      <input type="text" id="budget" placeholder="Your proposed budget">
+
+      <div class="form-actions">
+        <button type="button" id="submitHireBtn" class="btn btn-primary">Submit Request</button>
+      </div>
+    </div>
+  </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <p>© 2026 DevAgency Global. All Rights Reserved.</p>
+  </div>
+</footer>
+
+<!-- SCRIPTS -->
+<script src="https://abstryaproject.github.io/devagency/js/tsparticles.min.js"></script>
+<script src="https://abstryaproject.github.io/devagency/js/particles-config.js"></script>
+<script src="https://abstryaproject.github.io/devagency/js/email.min.js"></script>
+<script src="https://abstryaproject.github.io/devagency/js/script.js"></script>
+<script src="https://abstryaproject.github.io/devagency/js/anti-copy.js"></script>
+<script>
+  const slider = document.querySelector('.testimonials-slider');
+  const nextBtn = document.querySelector('.arrow.right');
+  const prevBtn = document.querySelector('.arrow.left');
+
+  const scrollStep = 290;
+
+  nextBtn.addEventListener('click', () => {
+    slider.scrollBy({
+      left: scrollStep,
+      behavior: 'smooth'
+    });
+  });
+
+  prevBtn.addEventListener('click', () => {
+    slider.scrollBy({
+      left: -scrollStep,
+      behavior: 'smooth'
+    });
+  });
+</script>
+<script>
+  let autoScroll;
+  const startAuto = () => {
+    autoScroll = setInterval(() => {
+      slider.scrollBy({ left: 290, behavior: 'smooth' });
+    }, 5000);
+  };
+
+  const stopAuto = () => clearInterval(autoScroll);
+
+  startAuto();
+
+  nextBtn.addEventListener('click', () => {
+    stopAuto();
+    slider.scrollBy({ left: 290, behavior: 'smooth' });
+    startAuto();
+  });
+
+  prevBtn.addEventListener('click', () => {
+    stopAuto();
+    slider.scrollBy({ left: -290, behavior: 'smooth' });
+    startAuto();
+  });
+</script>
 </body>
 </html>
